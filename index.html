@@ -330,6 +330,42 @@
     gap: 6px;
   }
 
+  /* Chamada "Os links tão aqui embaixo" com Gustavo apontando */
+  .chamada-links {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    padding: 10px 14px 10px 10px;
+    margin-bottom: 16px;
+    border-radius: 18px;
+    background: linear-gradient(135deg, #F6E9CE, #EEDAB4);
+    border: 1.5px solid var(--palha-borda);
+    box-shadow: 0 5px 14px rgba(42, 25, 14, .08);
+    text-align: left;
+  }
+  .chamada-foto {
+    width: 68px;
+    height: 82px;
+    border-radius: 13px;
+    object-fit: cover;
+    object-position: 50% 28%;
+    border: 2px solid #FFFDF8;
+    box-shadow: 0 4px 10px rgba(42, 25, 14, .18);
+    flex: none;
+  }
+  .chamada-txt b {
+    display: block;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1rem;
+    color: var(--madeira-escura);
+    margin-bottom: 3px;
+  }
+  .chamada-txt p {
+    font-size: .85rem;
+    line-height: 1.38;
+    color: var(--tinta-suave);
+  }
+
   /* Botões das Lojas */
   .links {
     display: flex;
@@ -547,11 +583,19 @@
           </div>
 
           <div class="video-rodape">
-            <p class="video-fala">"Ó, aqui eu deixo só trem que eu usaria na lida. Escolhe aí, compadre."</p>
-            <div class="video-dica" id="videoDica">Seus links de confiança ficam logo abaixo</div>
+            <p class="video-fala">"Esses links aí embaixo é tudo trem que eu usaria na lida — se não presta, eu não indico não."</p>
+            <div class="video-dica" id="videoDica">Toque em "Ativar som" para ouvir o recado</div>
           </div>
         </div>
       </section>
+
+      <div class="chamada-links">
+        <img class="chamada-foto" src="gustavo-apontando.webp" alt="Gustavo da Roça sorrindo e apontando para os links abaixo" width="68" height="82">
+        <div class="chamada-txt">
+          <b>Os links tão aqui embaixo</b>
+          <p>Escolhe aí, compadre. Só coisa testada e de loja oficial.</p>
+        </div>
+      </div>
 
       <div class="linha-couro">Meus links e lojas</div>
 
@@ -563,8 +607,8 @@
           Só o que aguenta o tranco
         </span>
         <span>
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/></svg>
-          Lojas oficiais e seguras
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+          Compra direto na loja ou no app
         </span>
       </div>
 
@@ -711,17 +755,36 @@ if (CONFIG.videoArquivo) {
 }
 
 btnSom.addEventListener('click', () => {
-  videoEl.muted = !videoEl.muted;
-  const ligado = !videoEl.muted;
-  if (ligado) {
+  // Se já terminou com som ligado, toca de novo 1 vez
+  if (!videoEl.muted && videoEl.ended) {
     videoEl.currentTime = 0;
     videoEl.play().catch(() => {});
+    txtSom.textContent = 'Silenciar';
+    videoDica.textContent = 'Ouvindo Gustavo da Roça';
+    return;
   }
-  btnSom.classList.toggle('som-ligado', ligado);
-  btnSom.setAttribute('aria-pressed', String(ligado));
-  icSom.innerHTML = ligado ? SOM_ON : SOM_OFF;
-  txtSom.textContent = ligado ? 'Som ligado' : 'Ativar som';
-  videoDica.textContent = ligado ? 'Ouvindo Gustavo da Roça' : 'Toque em "Ativar som" para ouvir o recado';
+  const ligar = videoEl.muted;
+  videoEl.muted = !ligar;
+  // Sem loop barulhento: com som ligado toca 1 vez e para limpo no fim; mudo volta ao loop silencioso
+  videoEl.loop = !ligar;
+  if (ligar) {
+    videoEl.currentTime = 0;
+    videoEl.play().catch(() => {});
+  } else {
+    videoEl.play().catch(() => {});
+  }
+  btnSom.classList.toggle('som-ligado', ligar);
+  btnSom.setAttribute('aria-pressed', String(ligar));
+  icSom.innerHTML = ligar ? SOM_ON : SOM_OFF;
+  txtSom.textContent = ligar ? 'Silenciar' : 'Ativar som';
+  videoDica.textContent = ligar ? 'Ouvindo Gustavo da Roça' : 'Toque em "Ativar som" para ouvir o recado';
+});
+
+videoEl.addEventListener('ended', () => {
+  if (!videoEl.muted) {
+    txtSom.textContent = 'Ouvir de novo';
+    videoDica.textContent = 'Recado ouvido · os links estão logo abaixo';
+  }
 });
 </script>
 </body>
