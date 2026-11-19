@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gustavo do Agro — achadinhos que aguentam o tranco</title>
+<meta name="description" content="Dia a dia no estradão, dicas práticas e achadinhos que aguentam o tranco.">
+<meta property="og:title" content="Gustavo do Agro">
+<meta property="og:description" content="Achadinhos que aguentam o tranco 🤠🚚">
+<meta property="og:image" content="https://gustavodoagro.me/gustavo.jpg">
+<link rel="icon" href="gustavo.jpg">
+<style>
+  :root{
+    --terra:#7a4a2a; --terra-escura:#4e2e1a; --creme:#f6ecdc; --palha:#e8d3ac;
+    --laranja:#d9822b; --texto:#2b1d12; --sombra:0 6px 18px rgba(43,29,18,.18);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;background:var(--creme);color:var(--texto);min-height:100vh}
+  .capa{height:190px;background:url("capa.jpg") center 30%/cover;position:relative}
+  .capa::after{content:"";position:absolute;inset:0;background:linear-gradient(to bottom,rgba(0,0,0,0) 40%,var(--creme))}
+  main{max-width:520px;margin:-80px auto 0;padding:0 18px 40px;position:relative;z-index:1;text-align:center}
+  .foto{width:132px;height:132px;border-radius:50%;object-fit:cover;border:5px solid var(--creme);box-shadow:var(--sombra)}
+  h1{font-size:1.6rem;margin-top:10px;color:var(--terra-escura)}
+  .bio{margin:8px auto 22px;max-width:380px;line-height:1.45;color:#5a4232}
+  .fala{background:var(--palha);border-radius:14px;padding:12px 16px;margin-bottom:22px;font-style:italic;color:var(--terra-escura)}
+  .links{display:flex;flex-direction:column;gap:12px}
+  .btn{display:flex;align-items:center;gap:12px;text-decoration:none;background:var(--terra);color:#fff;
+       padding:15px 18px;border-radius:14px;font-weight:600;font-size:1.05rem;box-shadow:var(--sombra);transition:transform .12s}
+  .btn:hover{transform:translateY(-2px);background:var(--terra-escura)}
+  .btn .ic{font-size:1.4rem;width:32px;text-align:center}
+  .btn .txt{flex:1;text-align:left}
+  .btn small{display:block;font-weight:400;opacity:.85;font-size:.82rem}
+  .btn.destaque{background:var(--laranja)}
+  .btn.breve{background:#c9b38d;color:#5a4232;pointer-events:none;box-shadow:none}
+  .btn.breve .selo{font-size:.72rem;background:#fff6;border-radius:999px;padding:3px 8px}
+  footer{margin-top:28px;font-size:.78rem;color:#7d6652;line-height:1.5}
+</style>
+</head>
+<body>
+  <div class="capa" role="img" aria-label="Gustavo encostado na cerca do curral com o gado atrás"></div>
+  <main>
+    <img class="foto" src="gustavo.jpg" alt="Gustavo segurando o chapéu" width="132" height="132">
+    <h1>Gustavo do Agro 🤠</h1>
+    <p class="bio">Dia a dia no estradão, dicas práticas e achadinhos que aguentam o tranco 🚚</p>
+    <p class="fala">"Ó, aqui eu deixo só trem que eu usaria na lida. Escolhe aí, compadre."</p>
+
+    <nav class="links">
+      <!-- Para ativar uma loja: troque class="btn breve" por class="btn" e coloque o link no href -->
+      <a class="btn destaque" href="https://www.facebook.com/Gustavodarocaoficial">
+        <span class="ic">📘</span><span class="txt">Minha página no Facebook<small>Vídeos novos todo dia</small></span>
+      </a>
+      <a class="btn breve" href="#">
+        <span class="ic">🛒</span><span class="txt">Achadinhos da Shopee<small>Os produtos dos vídeos</small></span><span class="selo">em breve</span>
+      </a>
+      <a class="btn breve" href="#">
+        <span class="ic">📦</span><span class="txt">Amazon</span><span class="selo">em breve</span>
+      </a>
+      <a class="btn breve" href="#">
+        <span class="ic">🛍️</span><span class="txt">Mercado Livre</span><span class="selo">em breve</span>
+      </a>
+      <a class="btn breve" href="#">
+        <span class="ic">🎵</span><span class="txt">TikTok Shop</span><span class="selo">em breve</span>
+      </a>
+    </nav>
+
+    <footer>
+      Alguns links são de afiliado: se você comprar por eles, eu posso ganhar uma comissão, sem custo a mais pra você.
+    </footer>
+  </main>
+</body>
+</html>
