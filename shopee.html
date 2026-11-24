@@ -1,0 +1,311 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<script>if (location.protocol === 'http:' && location.hostname !== 'localhost') { location.replace('https://' + location.host + location.pathname + location.search + location.hash); }</script>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Achadinhos da Shopee — Gustavo da Roça</title>
+<meta name="description" content="Vitrine oficial de achadinhos da Shopee escolhidos pelo Gustavo da Roça.">
+<meta name="theme-color" content="#3D2616">
+<link rel="icon" type="image/webp" href="gustavo.webp">
+<style>
+  :root {
+    --madeira-escura: #2A190E;
+    --madeira: #4B2E1B;
+    --couro: #6E4226;
+    --por-do-sol: #D47224;
+    --por-do-sol-escuro: #B15614;
+    --ouro: #E8B14A;
+    --palha: #EFE2C6;
+    --palha-borda: #D8C39A;
+    --papel: #FBF5E8;
+    --tinta: #2B1B10;
+    --tinta-suave: #5F4633;
+    --tinta-leve: #80644E;
+    --shopee: #D94E1F;
+    --shopee-bg: #FBE5DC;
+    --sombra-btn: 0 6px 16px rgba(42, 25, 14, .12);
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+    color: var(--tinta);
+    min-height: 100vh;
+    background: radial-gradient(ellipse at 50% 0%, #52321D 0%, #2A190E 65%, #1B0F08 100%);
+    display: flex;
+    justify-content: center;
+  }
+  .folha {
+    width: 100%;
+    max-width: 480px;
+    min-height: 100vh;
+    background: linear-gradient(180deg, #FBF5E8 0%, #F5EBDA 55%, #EFE2C9 100%);
+    box-shadow: 0 0 60px rgba(0, 0, 0, .48);
+    padding: 20px 18px 34px;
+  }
+  @media (min-width: 520px) {
+    body { padding: 20px 16px; }
+    .folha {
+      min-height: auto;
+      border-radius: 28px;
+      border: 2px solid rgba(232, 177, 74, .28);
+    }
+  }
+  .topo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 18px;
+  }
+  .voltar {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 12px;
+    border-radius: 999px;
+    background: var(--palha);
+    border: 1px solid var(--palha-borda);
+    color: var(--tinta);
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+  }
+  .perfil-mini {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 18px;
+  }
+  .perfil-mini img {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--ouro);
+  }
+  h1 {
+    font-size: 20px;
+    line-height: 1.2;
+    color: var(--tinta);
+  }
+  .sub {
+    font-size: 13.5px;
+    color: var(--tinta-suave);
+    margin-top: 3px;
+  }
+  .lista {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 14px 15px;
+    border-radius: 16px;
+    background: #FFFDF7;
+    border: 1px solid var(--palha-borda);
+    box-shadow: var(--sombra-btn);
+    text-decoration: none;
+    color: var(--tinta);
+    transition: transform .12s ease, border-color .12s ease;
+  }
+  .card:hover {
+    transform: translateY(-1px);
+    border-color: var(--shopee);
+  }
+  .card-info { flex: 1; min-width: 0; }
+  .tag {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .03em;
+    color: var(--shopee);
+    background: var(--shopee-bg);
+    padding: 3px 8px;
+    border-radius: 999px;
+    margin-bottom: 5px;
+  }
+  .titulo {
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 1.25;
+  }
+  .desc {
+    font-size: 13px;
+    color: var(--tinta-suave);
+    margin-top: 3px;
+  }
+  .preco-cta {
+    text-align: right;
+    flex-shrink: 0;
+  }
+  .preco {
+    font-size: 15px;
+    font-weight: 800;
+    color: var(--por-do-sol-escuro);
+  }
+  .btn-ver {
+    display: inline-block;
+    margin-top: 6px;
+    padding: 6px 11px;
+    border-radius: 10px;
+    background: var(--shopee);
+    color: #fff;
+    font-size: 12px;
+    font-weight: 700;
+  }
+  .rodape {
+    margin-top: 22px;
+    text-align: center;
+    font-size: 12px;
+    color: var(--tinta-leve);
+    line-height: 1.45;
+  }
+</style>
+</head>
+<body>
+<div class="folha">
+  <div class="topo">
+    <a class="voltar" href="index.html">← Voltar para os links</a>
+  </div>
+  <div class="perfil-mini">
+    <img src="gustavo.webp" alt="Gustavo da Roça">
+    <div>
+      <h1>Achadinhos da Shopee</h1>
+      <p class="sub">Só o que aguenta o tranco · entrega em todo o Brasil</p>
+    </div>
+  </div>
+
+  <div class="lista">
+    <a class="card" href="https://s.shopee.com.br/7pv3SXwD4R" target="_blank" rel="noopener noreferrer">
+      <div class="card-info">
+        <span class="tag">Natal &amp; Quintal</span>
+        <div class="titulo">Pisca-Pisca Solar 10m Branco Quente</div>
+        <div class="desc">Carrega no sol e acende sozinho à noite, sem puxar fio.</div>
+      </div>
+      <div class="preco-cta">
+        <div class="preco">R$ 28,47</div>
+        <span class="btn-ver">Ver na Shopee</span>
+      </div>
+    </a>
+
+    <a class="card" href="https://s.shopee.com.br/3Vm4InTSDB" target="_blank" rel="noopener noreferrer">
+      <div class="card-info">
+        <span class="tag">Natal &amp; Varanda</span>
+        <div class="titulo">Cascata LED Externa IP66 (À Prova d'Água)</div>
+        <div class="desc">Branco quente resistente à chuva para beiral e frente de casa.</div>
+      </div>
+      <div class="preco-cta">
+        <div class="preco">R$ 29,90</div>
+        <span class="btn-ver">Ver na Shopee</span>
+      </div>
+    </a>
+
+    <a class="card" href="https://s.shopee.com.br/AUvodV2Rek" target="_blank" rel="noopener noreferrer">
+      <div class="card-info">
+        <span class="tag">Natal &amp; Jardim</span>
+        <div class="titulo">Cordão Pisca-Pisca Solar Bolinha Cristal</div>
+        <div class="desc">5m com 20 luzes solares, sem quebrar parede nem gastar luz.</div>
+      </div>
+      <div class="preco-cta">
+        <div class="preco">R$ 24,99</div>
+        <span class="btn-ver">Ver na Shopee</span>
+      </div>
+    </a>
+
+    <a class="card" href="https://s.shopee.com.br/114jMOEQ5N" target="_blank" rel="noopener noreferrer">
+      <div class="card-info">
+        <span class="tag">Casa &amp; Armário</span>
+        <div class="titulo">Luminária LED com Sensor de Movimento USB</div>
+        <div class="desc">Gruda com ímã, acende sozinha ao abrir e recarrega no USB.</div>
+      </div>
+      <div class="preco-cta">
+        <div class="preco">R$ 31,00</div>
+        <span class="btn-ver">Ver na Shopee</span>
+      </div>
+    </a>
+
+    <a class="card" href="https://s.shopee.com.br/4LLBIQwzEB" target="_blank" rel="noopener noreferrer">
+      <div class="card-info">
+        <span class="tag">Café da Manhã</span>
+        <div class="titulo">Garrafa Térmica Nórdica 1L Cabo Madeira</div>
+        <div class="desc">Mantém o café quente por horas na roça ou em casa.</div>
+      </div>
+      <div class="preco-cta">
+        <div class="preco">R$ 43,98</div>
+        <span class="btn-ver">Ver na Shopee</span>
+      </div>
+    </a>
+
+    <a class="card" href="https://s.shopee.com.br/5AuII3V323" target="_blank" rel="noopener noreferrer">
+      <div class="card-info">
+        <span class="tag">Mais Vendido</span>
+        <div class="titulo">Óleo Extraordinário Elseve 100ml</div>
+        <div class="desc">Protetor térmico e anti-frizz que a patroa não larga.</div>
+      </div>
+      <div class="preco-cta">
+        <div class="preco">R$ 36,99</div>
+        <span class="btn-ver">Ver na Shopee</span>
+      </div>
+    </a>
+
+    <a class="card" href="https://s.shopee.com.br/9KjrIGLl2h" target="_blank" rel="noopener noreferrer">
+      <div class="card-info">
+        <span class="tag">Caminhonete</span>
+        <div class="titulo">Toalha Mágica de PVA Ultra Absorção</div>
+        <div class="desc">Seca a lataria sem riscar e sem deixar fiapo, direto no tubinho.</div>
+      </div>
+      <div class="preco-cta">
+        <div class="preco">R$ 23,90</div>
+        <span class="btn-ver">Ver na Shopee</span>
+      </div>
+    </a>
+
+    <a class="card" href="https://s.shopee.com.br/5AuIKizBth" target="_blank" rel="noopener noreferrer">
+      <div class="card-info">
+        <span class="tag">Caminhonete</span>
+        <div class="titulo">Suporte Veicular Magnético Forte</div>
+        <div class="desc">Trava o celular firme até na estrada de chão e solta com uma mão.</div>
+      </div>
+      <div class="preco-cta">
+        <div class="preco">R$ 14,99</div>
+        <span class="btn-ver">Ver na Shopee</span>
+      </div>
+    </a>
+
+    <a class="card" href="https://s.shopee.com.br/6fj67aiKmI" target="_blank" rel="noopener noreferrer">
+      <div class="card-info">
+        <span class="tag">Caminhonete</span>
+        <div class="titulo">Mini Aspirador Portátil Sem Fio USB</div>
+        <div class="desc">Cabe no porta-luvas e puxa poeira e terra do banco num instante.</div>
+      </div>
+      <div class="preco-cta">
+        <div class="preco">R$ 181,00</div>
+        <span class="btn-ver">Ver na Shopee</span>
+      </div>
+    </a>
+
+    <a class="card" href="https://s.shopee.com.br/50as5s6nQg" target="_blank" rel="noopener noreferrer">
+      <div class="card-info">
+        <span class="tag">Caminhonete</span>
+        <div class="titulo">Mini Compressor Portátil Digital USB</div>
+        <div class="desc">Cabe no porta-luvas e calibra o pneu sem depender de posto.</div>
+      </div>
+      <div class="preco-cta">
+        <div class="preco">R$ 79,99</div>
+        <span class="btn-ver">Ver na Shopee</span>
+      </div>
+    </a>
+  </div>
+
+  <p class="rodape">
+    Links oficiais de afiliado do Gustavo da Roça na Shopee.<br>
+    Preços e estoque podem variar conforme o vendedor na Shopee.
+  </p>
+</div>
+</body>
+</html>
